@@ -1,0 +1,15 @@
+.small-gap{
+  margin-bottom: 10px;
+}
+
+.gap{
+  margin-bottom: 20px;
+}
+
+.big-gap{
+  margin-bottom: 30px;
+}
+
+.color-danger{
+  color: #a94442;
+}
