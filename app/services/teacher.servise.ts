@@ -8,38 +8,45 @@ export class Teacher {
   surname: String;
   phoneNumber: String;
   email: String;
-  status:String;
-  department:String;
+  school: String;
+  status: String;
+  department: String;
 }
 
 @Injectable()
 export class TeacherService {
-  students = new Array<Teacher>();
+  teachers = new Array<Teacher>();
 
   constructor() {
-    var s = new Teacher();
-    s.id = 1;
-    s.name = "Ahmet";
-    s.surname = "Celik";
-    s.phoneNumber = "05403459494";
-    s.email = "ahmet@hotmail.com";
-    this.students.push(s);
+    var t = new Teacher();
+    t.id = 1;
+    t.name = "Ahmet";
+    t.surname = "Celik";
+    t.phoneNumber = "05403459494";
+    t.email = "ahmet@hotmail.com";
+    t.school = "Marmara Universitesi";
+    t.status = "Yuksel lisans";
+    t.department = "ilahiyat";
+    this.teachers.push(t);
 
-    var s = new Teacher();
-    s.id = 2;
-    s.name = "Hasan";
-    s.surname = "Celik";
-    s.phoneNumber = "05403459494";
-    s.email = "hasan@hotmail.com";
-    this.students.push(s);
+    var t = new Teacher();
+    t.id = 2;
+    t.name = "Hasan";
+    t.surname = "Celik";
+    t.phoneNumber = "05403459494";
+    t.email = "hasan@hotmail.com";
+    t.school = "Marmara Universitesi";
+    t.status = "Yuksel lisans";
+    t.department = "ilahiyat";
+    this.teachers.push(t);
   }
 
   get(id: number) {
-    return this.students[0];
+    return this.teachers[0];
   }
 
   getall() {
-    return this.students;
+    return this.teachers;
   }
 
   save() { }

@@ -1,25 +1,24 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, Router} from 'angular2/router';
-import {Student} from '../../services/student.servise';
-import {ListStudentComponent} from './list/listStudent.component';
-import {DetailStudentComponent} from './detail/detailStudent.component';
-import {CreateStudentComponent} from './create/createStudent.component';
-import {UpdateStudentComponent} from './update/updateStudent.component';
+import {Teacher} from '../../services/teacher.servise';
+import {ListTeacherComponent} from './list/listTeacher.component';
+import {DetailTeacherComponent} from './detail/detailTeacher.component';
+import {CreateTeacherComponent} from './create/createTeacher.component';
+import {UpdateTeacherComponent} from './update/updateTeacher.component';
 
 @Component({
   selector: 'home',
-  templateUrl: '/app/components/student/student.html',
+  templateUrl: '/app/components/teacher/teacher.html',
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-  { path: '/list', name: 'List', component: ListStudentComponent },
-  { path: '/create', name: 'Create', component: CreateStudentComponent },
-  { path: '/detail/:id', name: 'Detail', component: DetailStudentComponent },
-  { path: '/update/:id', name: 'Update', component: UpdateStudentComponent },
+  { path: '/list', name: 'List', component: ListTeacherComponent },
+  { path: '/create', name: 'Create', component: CreateTeacherComponent },
+  { path: '/detail/:id', name: 'Detail', component: DetailTeacherComponent },
+  { path: '/update/:id', name: 'Update', component: UpdateTeacherComponent },
 
 ])
-export class StudentComponent {
-  students: Student[];
-  constructor() {
-  }
+export class TeacherComponent {
+  students: Teacher[];
+  constructor() {}
 }

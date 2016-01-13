@@ -1,24 +1,24 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
-import {Student, StudentService} from '../../../services/student.servise';
+import {Teacher, TeacherService} from '../../../services/teacher.servise';
 import {NgForm, ControlGroup}    from 'angular2/common';
 
 
 @Component({
   selector: 'home',
-  templateUrl: '/app/components/student/list/listStudent.html',
+  templateUrl: '/app/components/teacher/list/listTeacher.html',
   directives: [ROUTER_DIRECTIVES]
 })
-export class ListStudentComponent {
-  students: Student[];
-  studentService = new StudentService()
+export class ListTeacherComponent {
+  teachers: Teacher[];
+  teacherService = new TeacherService()
 
   constructor() {
-    this.students = this.studentService.getall();
+    this.teachers = this.teacherService.getall();
   }
 
   remove(id: number) {
-    var s = this.students.find((x) => x.id == id);
-    this.students.splice(this.students.indexOf(s), 1);
+    var s = this.teachers.find((x) => x.id == id);
+    this.teachers.splice(this.teachers.indexOf(s), 1);
   }
 }

@@ -2,6 +2,7 @@ import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {HomeComponent} from "./home/home.component";
 import {StudentComponent} from "./student/student.component";
+import {TeacherComponent} from "./teacher/teacher.component";
 
 @Component({
   selector: 'app',
@@ -9,6 +10,7 @@ import {StudentComponent} from "./student/student.component";
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
+  { path: '/teacher/...', name: 'Teacher', component: TeacherComponent },
   { path: '/student/...', name: 'Student', component: StudentComponent },
   { path: '/', name: 'Home', component: HomeComponent, useAsDefault: true },
 ])

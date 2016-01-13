@@ -2,58 +2,24 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <h3>
-        {{student.name}}
-        {{student.surname}}
+        {{teacher.name}}
+        {{teacher.surname}}
       </h3>
       <p>
-        {{ student.email }}
+        {{ teacher.email }}
       </p>
       <p>
-        {{ student.phoneNumber }}
+        {{ teacher.phoneNumber }}
       </p>
       <p>
-        <a href="#">Sinif</a>
+        {{ teacher.school }}
       </p>
-      <h3>
-        Devamsizlik
-      </h3>
-      <div class="attendance-of-student" *ngFor="#course of courses">
-        <h4>{{ course }}</h4>
-        <svg width="421" height="60">
-          <g transform="translate(20, 20)">
-            <g [attr.transform]="'translate('+ x +', 0)'" *ngFor="#x of xs">
-              <rect class="day" width="11" height="11" y="0" fill="#eeeeee"></rect>
-              <rect class="day" width="11" height="11" y="13" fill="#eeeeee" data-count="0" data-date="2015-06-01">a</rect>
-            </g>
-            <text [attr.x]="month" y="-5" class="month" *ngFor="#month of months">Jun</text>
-            <text text-anchor="middle" class="wday" dx="-10" dy="9">S</text>
-            <text text-anchor="middle" class="wday" dx="-10" dy="22">M</text>
-          </g>
-        </svg>
-      </div>
-      <h3>
-        Toplam Devam Orani
-      </h3>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="progress">
-            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-              <span>80% Devam</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h3>
-        Ders Notlari
-      </h3>
-      <div class="col-md-2">
-        <table class="table">
-          <tr *ngFor="#grade of grades">
-            <td>{{ grade[0]}}</td>
-            <td>{{ grade[1]}}</td>
-          </tr>
-        </table>
-      </div>
+      <p>
+        {{ teacher.status }}
+      </p>
+      <p>
+        {{ teacher.department }}
+      </p>
     </div>
   </div>
 </section>
