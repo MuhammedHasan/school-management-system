@@ -4,6 +4,7 @@ import {HomeComponent} from "./home/home.component";
 import {StudentComponent} from "./student/student.component";
 import {TeacherComponent} from "./teacher/teacher.component";
 import {SemesterComponent} from "./semester/semester.component";
+import {CourseComponent} from "./course/course.component";
 
 
 @Component({
@@ -12,9 +13,10 @@ import {SemesterComponent} from "./semester/semester.component";
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-  { path: '/teacher/...', name: 'Teacher', component: TeacherComponent },
   { path: '/student/...', name: 'Student', component: StudentComponent },
-  { path: '/semester/...', name: 'Semester', component: SemesterComponent},
+  { path: '/teacher/...', name: 'Teacher', component: TeacherComponent },
+  { path: '/semester/...', name: 'Semester', component: SemesterComponent },
+  { path: '/course/...', name: 'Course', component: CourseComponent },
   { path: '/', name: 'Home', component: HomeComponent, useAsDefault: true },
 ])
 export class AppComponent { }

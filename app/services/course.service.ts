@@ -16,7 +16,7 @@ export class Course {
 }
 
 @Injectable()
-export class StudentService {
+export class CourseService {
   courses = new Array<Course>();
 
   constructor() {
