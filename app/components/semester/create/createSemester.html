@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Egitim Donemi Ekle</h3>
+  </div>
+  <div class="panel-body">
+    <form (ngSubmit)="onSubmit(semesterForm)" #semesterForm="ngForm">
+      <div class="form-group">
+        <label>Baslama Tarihi</label>
+        <input type="text" class="form-control" required [(ngModel)]="model.startDate" ngControl="startDate" #startDate="ngForm">
+        <div [hidden]="startDate.valid || startDate.pristine" class="alert alert-danger">
+          Baslama tarihi gerekli
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">Bitis Tarihi</label>
+        <input type="text" class="form-control" required [(ngModel)]="model.endDate" ngControl="endDate" #endDate="ngForm">
+        <div [hidden]="endDate.valid || endDate.pristine" class="alert alert-danger">
+          Bitis tarihi gerekli
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="power">Kitap Ucreti</label>
+        <input type="text" class="form-control" required [(ngModel)]="model.bookPayment" ngControl="bookPayment" #bookPayment="ngForm">
+        <div [hidden]="bookPayment.valid || bookPayment.pristine" class="alert alert-danger">
+          Kitap ucreti gerekli
+        </div>
+      </div>
+      <button type="submit" class="btn btn-default" [disabled]="!semesterForm.form.valid">Submit</button>
+    </form>
+  </div>
+</div>
