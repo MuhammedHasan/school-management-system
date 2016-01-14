@@ -18,12 +18,14 @@ export class SemesterService {
     s.id = 1;
     s.startDate = "08/08/2015";
     s.endDate = "08/04/2016";
+    s.bookPayment = 100;
     this.semesters.push(s);
 
     var s = new Semester();
     s.id = 2;
     s.startDate = "08/08/2015";
     s.endDate = "08/04/2016";
+    s.bookPayment = 300;
     this.semesters.push(s);
   }
 
