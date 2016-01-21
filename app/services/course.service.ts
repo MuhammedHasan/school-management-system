@@ -10,7 +10,7 @@ export class Course {
   id: number;
   name: String;
   teacher: Teacher;
-  lecture: Lecture[];
+  lectures: Lecture[];
   semester: Semester;
   class: Class;
 }

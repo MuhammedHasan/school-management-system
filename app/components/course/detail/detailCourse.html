@@ -2,12 +2,34 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <h3>
-        {{semester.startDate}} -
-        {{semester.endDate}}
+        {{course.name}}
       </h3>
       <p>
-        Kitap ucreti:{{ semester.bookPayment }}
+        Hoca:
+        {{ course.teacher.name }}
+        {{ course.teacher.surname }}
       </p>
+      <p>
+        Egitim Donemi:
+        {{ course.semester.startDate }}
+        -
+        {{ course.semester.endDate }}
+      </p>
+      <p>
+        Sinif:
+        {{ course.class.name }}
+      </p>
+      <h4>Ders Saatleri</h4>
+      <div class="lectures" *ngFor="#lecture of course.lectures">
+        <p>
+          {{lecture.startHour}}
+          -
+          {{lecture.endHour}}
+        </p>
+        <p>
+          {{ lecture.day }}
+        </p>
+      </div>
     </div>
   </div>
 </section>

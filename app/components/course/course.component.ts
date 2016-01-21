@@ -7,7 +7,7 @@ import {UpdateCourseComponent} from './update/updateCourse.component';
 
 @Component({
   selector: 'home',
-  templateUrl: '/app/components/semester/semester.html',
+  templateUrl: '/app/components/course/course.html',
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([

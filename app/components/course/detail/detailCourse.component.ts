@@ -4,13 +4,13 @@ import {Course,CourseService} from '../../../services/course.service';
 
 @Component({
   selector: 'home',
-  templateUrl: '/app/components/semester/detail/detailSemester.html',
+  templateUrl: '/app/components/course/detail/detailCourse.html',
   directives: [ROUTER_DIRECTIVES]
 })
 export class DetailCourseComponent {
-  semester: Semester;
+  course: Course;
 
   constructor(params: RouteParams) {
-    this.semester = new SemesterService().get(+params.get('id'));
+    this.course = new CourseService().get(+params.get('id'));
   }
 }
