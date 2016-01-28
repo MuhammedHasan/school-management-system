@@ -18,6 +18,19 @@
           Yeri Gerekli
         </div>
       </div>
+      <h3>Ogrenciler</h3>
+      <ul *ngFor="#s of students">
+        <li>{{s}}</li>
+      </ul>
+      <div class="form-group">
+        <label for="alterEgo">Ogrenci Ekle</label>
+        <div class="input-group">
+          <input type="text" class="form-control" required ngControl="student" #student="ngForm">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" [disabled]="!student.valid" (click)="addStudent(student.value)">Add</button>
+          </span>
+        </div>
+      </div>
       <button type="submit" class="btn btn-default" [disabled]="!classForm.form.valid">Submit</button>
     </form>
   </div>

@@ -9,6 +9,8 @@ import {Class, ClassService} from '../../../services/class.service';
 })
 export class CreateClassComponent {
   model = new Class();
+  students = new Array<String>();
+
   constructor(private router: Router) { }
 
   onSubmit() {
@@ -16,5 +18,10 @@ export class CreateClassComponent {
 
     this.model = new Class();
     this.router.navigate(['/Class/List']);
+  }
+
+  addStudent(studentName) {
+    console.log(studentName);
+    this.students.push(studentName);
   }
 }
