@@ -1,9 +1,9 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Hoca Ekle</h3>
+    <h3 class="panel-title">Sinif Ekle</h3>
   </div>
   <div class="panel-body">
-    <form (ngSubmit)="onSubmit(teacherForm)" #teacherForm="ngForm">
+    <form (ngSubmit)="onSubmit(classForm)" #classForm="ngForm">
       <div class="form-group">
         <label for="name">Adı</label>
         <input type="text" class="form-control" required [(ngModel)]="model.name" ngControl="name" #name="ngForm">
@@ -12,48 +12,13 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="alterEgo">Soyadı</label>
-        <input type="text" class="form-control" required [(ngModel)]="model.surname" ngControl="surname" #surname="ngForm">
-        <div [hidden]="surname.valid || surname.pristine" class="alert alert-danger">
-          Soyadi Gerekli
+        <label for="alterEgo">Yeri</label>
+        <input type="text" class="form-control" required [(ngModel)]="model.place" ngControl="place" #place="ngForm">
+        <div [hidden]="place.valid || place.pristine" class="alert alert-danger">
+          Yeri Gerekli
         </div>
       </div>
-      <div class="form-group">
-        <label for="power">Telefon Numarası</label>
-        <input type="text" class="form-control" required [(ngModel)]="model.phoneNumber" ngControl="phoneNumber" #phoneNumber="ngForm">
-        <div [hidden]="phoneNumber.valid || phoneNumber.pristine" class="alert alert-danger">
-          Telefon numarasi gerekli
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="power">Email</label>
-        <input type="text" class="form-control" required [(ngModel)]="model.email" ngControl="email" #email="ngForm">
-        <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
-          Email gerekli
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="power">Universite</label>
-        <input type="text" class="form-control" required [(ngModel)]="model.school" ngControl="school" #school="ngForm">
-        <div [hidden]="school.valid || school.pristine" class="alert alert-danger">
-          Universite gerekli
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="power">Statu</label>
-        <input type="text" class="form-control" required [(ngModel)]="model.status" ngControl="status" #status="ngForm">
-        <div [hidden]="status.valid || status.pristine" class="alert alert-danger">
-          Statu gerekli
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="power">Bolumu</label>
-        <input type="text" class="form-control" required [(ngModel)]="model.department" ngControl="department" #department="ngForm">
-        <div [hidden]="department.valid || department.pristine" class="alert alert-danger">
-          Bolum gerekli
-        </div>
-      </div>
-      <button type="submit" class="btn btn-default" [disabled]="!teacherForm.form.valid">Submit</button>
+      <button type="submit" class="btn btn-default" [disabled]="!classForm.form.valid">Submit</button>
     </form>
   </div>
 </div>

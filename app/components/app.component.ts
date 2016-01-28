@@ -5,7 +5,7 @@ import {StudentComponent} from "./student/student.component";
 import {TeacherComponent} from "./teacher/teacher.component";
 import {SemesterComponent} from "./semester/semester.component";
 import {CourseComponent} from "./course/course.component";
-
+import {ClassComponent} from "./class/class.component";
 
 @Component({
   selector: 'app',
@@ -17,6 +17,7 @@ import {CourseComponent} from "./course/course.component";
   { path: '/teacher/...', name: 'Teacher', component: TeacherComponent },
   { path: '/semester/...', name: 'Semester', component: SemesterComponent },
   { path: '/course/...', name: 'Course', component: CourseComponent },
+  { path: '/class/...', name: 'Class', component: ClassComponent },
   { path: '/', name: 'Home', component: HomeComponent, useAsDefault: true },
 ])
 export class AppComponent { }

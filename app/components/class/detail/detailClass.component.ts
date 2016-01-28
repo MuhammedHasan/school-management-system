@@ -1,18 +1,18 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, RouteParams} from 'angular2/router';
-import {Teacher, TeacherService} from '../../../services/teacher.servise';
+import {Class, ClassService} from '../../../services/class.service';
 
 
 @Component({
   selector: 'home',
-  templateUrl: '/app/components/teacher/detail/detailTeacher.html',
+  templateUrl: '/app/components/class/detail/detailClass.html',
   directives: [ROUTER_DIRECTIVES]
 })
-export class DetailTeacherComponent {
-  teacher: Teacher;
+export class DetailClassComponent {
+  class: Class;
 
 
   constructor(params: RouteParams) {
-    this.teacher = new TeacherService().get(+params.get('id'));
+    this.class = new ClassService().get(+params.get('id'));
   }
 }

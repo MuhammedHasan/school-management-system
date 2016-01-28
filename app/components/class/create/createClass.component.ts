@@ -1,23 +1,20 @@
 import {Component} from 'angular2/core';
 import {Router, ROUTER_DIRECTIVES} from 'angular2/router';
-import {Teacher} from '../../../services/teacher.servise';
+import {Class, ClassService} from '../../../services/class.service';
 
 @Component({
   selector: 'home',
   templateUrl: '/app/components/class/create/createClass.html',
   directives: [ROUTER_DIRECTIVES]
 })
-export class CreateTeacherComponent {
-  model = new Teacher();
+export class CreateClassComponent {
+  model = new Class();
   constructor(private router: Router) { }
 
   onSubmit() {
-    var s = new Teacher();
-    s.name = this.model.name;
-    s.surname = this.model.surname;
-    s.phoneNumber = this.model.phoneNumber;
-    s.email = this.model.email;
-    this.model = new Teacher();
-    this.router.navigate(['/Teacher/List']);
+    var c = new Class();
+
+    this.model = new Class();
+    this.router.navigate(['/Class/List']);
   }
 }

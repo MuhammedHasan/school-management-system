@@ -3,7 +3,7 @@
     <h3 class="panel-title">Ogrenci Ekle</h3>
   </div>
   <div class="panel-body">
-    <form (ngSubmit)="onSubmit(studentForm)" #studentForm="ngForm">
+    <form (ngSubmit)="onSubmit(studentForm)" #classForm="ngForm">
       <div class="form-group">
         <label for="name">Adı</label>
         <input type="text" class="form-control" required [(ngModel)]="model.name" ngControl="name" #name="ngForm">
